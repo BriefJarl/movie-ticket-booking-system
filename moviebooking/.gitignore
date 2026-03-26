@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+moviebooking/src/main/resources/application.properties
