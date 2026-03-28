@@ -24,7 +24,7 @@ public class KafkaConsumerService {
         try {
             String to = "codersamurai.96@gmail.com";
 
-            // ✅ DEBUG (VERY IMPORTANT)
+            // (ADD THIS)
             System.out.println("📧 Sending email to: " + to);
 
             emailService.sendTicketEmail(

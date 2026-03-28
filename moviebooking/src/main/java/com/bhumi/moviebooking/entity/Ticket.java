@@ -1,6 +1,6 @@
 package com.bhumi.moviebooking.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore; // 🔥 ADD THIS
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class Ticket {
     // 👉 Many tickets belong to one user
     @ManyToOne
     @JoinColumn(name = "user_id")
-    @JsonIgnore   // 🔥 OPTIONAL BUT RECOMMENDED
+    @JsonIgnore
     private User user;
 
     // 👉 Many tickets belong to one show

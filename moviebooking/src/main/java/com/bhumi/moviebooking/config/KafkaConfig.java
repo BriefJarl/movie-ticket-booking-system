@@ -21,7 +21,7 @@ public class KafkaConfig {
 
     public static final String TOPIC = "TICKET_BOOKED";
 
-    // ✅ Create Topic automatically
+    // Create Topic automatically
     @Bean
     public NewTopic createTopic() {
         return TopicBuilder.name(TOPIC).build();
@@ -44,7 +44,7 @@ public class KafkaConfig {
         return new KafkaTemplate<>(producerFactory());
     }
 
-    // ================== 🔥 FIXED JSON CONFIG ==================
+    // ================== JSON CONFIG ==================
     @Bean
     public ProducerFactory<String, TicketEvent> jsonProducerFactory() {
 

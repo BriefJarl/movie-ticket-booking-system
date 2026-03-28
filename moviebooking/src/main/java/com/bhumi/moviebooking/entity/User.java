@@ -12,7 +12,7 @@ public class User {
     private String name;
     private String email;
 
-    // ✅ GETTERS
+    // GETTERS
 
     public Long getId() {
         return id;
@@ -26,7 +26,7 @@ public class User {
         return email;
     }
 
-    // ✅ SETTERS
+    // SETTERS
 
     public void setId(Long id) {
         this.id = id;

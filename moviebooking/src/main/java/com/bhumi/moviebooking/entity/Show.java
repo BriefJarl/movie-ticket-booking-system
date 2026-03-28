@@ -1,6 +1,6 @@
 package com.bhumi.moviebooking.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore; // 🔥 ADD THIS
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Show {
     private LocalDateTime showTime;
 
     @OneToMany(mappedBy = "show", cascade = CascadeType.ALL)
-    @JsonIgnore   // 🔥 IMPORTANT FIX
+    @JsonIgnore
     private List<ShowSeat> seats;
 
     public Show() {}

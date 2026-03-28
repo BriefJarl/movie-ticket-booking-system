@@ -23,8 +23,8 @@ public class EmailService {
 
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
-            // ❗ VERY IMPORTANT (ADD THIS)
-            helper.setFrom("YOUR_EMAIL@gmail.com"); // ⚠️ replace with your Gmail
+            // (ADD THIS)
+            helper.setFrom("YOUR_EMAIL@gmail.com"); // <-- REPLACE WITH YOUR EMAIL
 
             helper.setTo(toEmail);
             helper.setSubject("🎬 Ticket Booking Confirmed");

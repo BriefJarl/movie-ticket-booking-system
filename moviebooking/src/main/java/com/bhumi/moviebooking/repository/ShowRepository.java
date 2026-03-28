@@ -49,7 +49,7 @@ public interface ShowRepository extends JpaRepository<Show, Long> {
     );
 
 
-    // ⭐ Get shows by movie
+    // Get shows by movie
     @Query(
             value = "SELECT s.id, s.show_time, t.name " +
                     "FROM shows s " +
@@ -60,7 +60,7 @@ public interface ShowRepository extends JpaRepository<Show, Long> {
     List<Object[]> getShowsByMovie(@Param("movieId") Long movieId);
 
 
-    // ⭐ Seats by movie
+    // Seats by movie
     @Query(
             value = "SELECT ss.id, ss.seat_number, ss.available " +
                     "FROM show_seats ss " +

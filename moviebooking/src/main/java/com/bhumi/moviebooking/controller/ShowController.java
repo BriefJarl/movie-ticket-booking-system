@@ -35,7 +35,7 @@ public class ShowController {
     }
 
 
-    // ⭐ Smart Search API
+    // Search API
     @GetMapping("/search")
     public List<SearchResultResource> searchShows(
 

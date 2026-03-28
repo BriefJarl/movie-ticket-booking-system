@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-// 🔥 ADD THIS IMPORT
+// ADD THIS IMPORT
 import com.bhumi.moviebooking.service.KafkaProducerService;
 
 @Service
@@ -27,10 +27,10 @@ public class TicketService {
     private final ShowRepository showRepository;
     private final UserRepository userRepository;
 
-    // 🔥 ADD THIS FIELD
+    // ADD THIS FIELD
     private final KafkaProducerService kafkaProducerService;
 
-    // 🔥 UPDATED CONSTRUCTOR
+    // UPDATED CONSTRUCTOR
     public TicketService(TicketRepository ticketRepository,
                          ShowSeatRepository showSeatRepository,
                          ShowRepository showRepository,
@@ -44,7 +44,7 @@ public class TicketService {
         this.kafkaProducerService = kafkaProducerService;
     }
 
-    // 🔥 FINAL WORKING METHOD
+    // FINAL WORKING METHOD
     public Ticket bookTicket(BookingResource bookingResource) {
 
         System.out.println("Incoming seats: " + bookingResource.getSeatNumbers());
@@ -65,7 +65,7 @@ public class TicketService {
 
         System.out.println("Normalized seats: " + normalizedSeats);
 
-        // 🔥 Fetch seats
+        // Fetch seats
         List<ShowSeat> selectedSeats =
                 showSeatRepository.findByShow_IdAndSeatNumberIn(
                         show.getId(),
@@ -74,12 +74,12 @@ public class TicketService {
 
         System.out.println("Selected seats count: " + selectedSeats.size());
 
-        // ❌ If seats not found
+        // If seats not found
         if (selectedSeats.isEmpty()) {
             throw new RuntimeException("Seats not found or mismatch");
         }
 
-        // ❌ Check already booked
+        // Check already booked
         for (ShowSeat seat : selectedSeats) {
             if (!seat.isAvailable()) {
                 throw new RuntimeException("Seat already booked: " + seat.getSeatNumber());
@@ -101,7 +101,7 @@ public class TicketService {
             showSeatRepository.save(seat);
         }
 
-        // 🔥🔥🔥 KAFKA EVENT (MOST IMPORTANT)
+        // KAFKA EVENT (MOST IMPORTANT)
         kafkaProducerService.sendTicketEvent(
                 user.getName(),
                 "Movie-" + show.getMovieId(),
