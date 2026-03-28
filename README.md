@@ -1,4 +1,4 @@
-\# 🎬 Movie Ticket Booking System
+# 🎬 Movie Ticket Booking System
 
 
 
@@ -6,69 +6,69 @@ A full-stack backend project built using Spring Boot, Kafka, and MySQL.
 
 
 
-\## 🚀 Features
+## 🚀 Features
 
-\- 🎟️ Book movie tickets
+- 🎟️ Book movie tickets
 
-\- 💺 Real-time seat availability
+- 💺 Real-time seat availability
 
-\- ⚡ Kafka event-driven architecture
+- ⚡ Kafka event-driven architecture
 
-\- 📩 Email notification on booking
+- 📩 Email notification on booking
 
-\- 👤 User-based booking history
-
-
-
-\## 🛠️ Tech Stack
-
-\- Java + Spring Boot
-
-\- Apache Kafka
-
-\- MySQL
-
-\- Spring Data JPA
-
-\- REST APIs
+- 👤 User-based booking history
 
 
 
-\## 🔥 Flow
+## 🛠️ Tech Stack
 
-1\. User books ticket
+- Java + Spring Boot
 
-2\. TicketService processes booking
+- Apache Kafka
 
-3\. Kafka event is produced
+- MySQL
 
-4\. Consumer listens to event
+- Spring Data JPA
 
-5\. Email is sent automatically
-
-
-
-\## 📸 Screenshots
-
-\- Booking API response
-
-\- Kafka console logs
-
-\- Email confirmation
+- REST APIs
 
 
 
-\## ▶️ How to Run
+## 🔥 Flow
 
-1\. Start Kafka + Zookeeper
+1. User books ticket
 
-2\. Run Spring Boot app
+2. TicketService processes booking
 
-3\. Hit API: `/kafka/book?user=...\&movie=...\&seat=...`
+3. Kafka event is produced
+
+4. Consumer listens to event
+
+5. Email is sent automatically
 
 
 
-\## 👩‍💻 Author
+## 📸 Screenshots
+
+- Booking API response
+
+- Kafka console logs
+
+- Email confirmation
+
+
+
+## ▶️ How to Run
+
+1. Start Kafka + Zookeeper
+
+2. Run Spring Boot app
+
+3. Hit API: `/kafka/book?user=...\&movie=...\&seat=...`
+
+
+
+## 👩‍💻 Author
 
 Bhumika Shaw
 
