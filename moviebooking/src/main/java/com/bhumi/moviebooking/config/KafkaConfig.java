@@ -27,7 +27,7 @@ public class KafkaConfig {
         return TopicBuilder.name(TOPIC).build();
     }
 
-    // ================== STRING CONFIG (KEEP AS IT IS) ==================
+    // ================== STRING CONFIG ==================
     @Bean
     public ProducerFactory<String, String> producerFactory() {
         Map<String, Object> config = new HashMap<>();
