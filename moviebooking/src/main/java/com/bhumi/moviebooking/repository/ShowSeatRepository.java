@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface ShowSeatRepository extends JpaRepository<ShowSeat, Long> {
 
-    // METHOD (uses entity mapping correctly)
     List<ShowSeat> findByShow_IdAndSeatNumberIn(Long showId, List<String> seatNumbers);
 }
