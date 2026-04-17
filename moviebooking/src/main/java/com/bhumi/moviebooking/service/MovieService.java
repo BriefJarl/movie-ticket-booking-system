@@ -16,24 +16,24 @@ public class MovieService {
         this.movieRepository = movieRepository;
     }
 
-    // ✅ Save Movie
+    // Save Movie
     public Movie saveMovie(Movie movie) {
         return movieRepository.save(movie);
     }
 
-    // ✅ Get All Movies
+    //Get All Movies
     public List<Movie> getAllMovies() {
         return movieRepository.findAll();
     }
 
-    // ✅ Get Movie By ID (Professional 404 handling)
+    //Get Movie By ID (Professional 404 handling)
     public Movie getMovieById(Long id) {
         return movieRepository.findById(id)
                 .orElseThrow(() ->
                         new ResourceNotFoundException("Movie not found with id " + id));
     }
 
-    // ✅ Delete Movie (Also throw 404 if not found)
+    //Delete Movie (Also throw 404 if not found)
     public void deleteMovie(Long id) {
         Movie movie = movieRepository.findById(id)
                 .orElseThrow(() ->
@@ -42,7 +42,7 @@ public class MovieService {
         movieRepository.delete(movie);
     }
 
-    // ✅ Update Movie (Also throw 404 if not found)
+    //Update Movie (Also throw 404 if not found)
     public Movie updateMovie(Long id, Movie updatedMovie) {
 
         Movie movie = movieRepository.findById(id)
