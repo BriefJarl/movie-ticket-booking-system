@@ -66,6 +66,10 @@ A full-stack backend project built using Spring Boot, Kafka, and MySQL.
 
 3. Hit API: `/kafka/book?user=...\&movie=...\&seat=...`
 
+## 👤 Author
+
+Developed independently by Bhumika Shaw.
+
 
 
 ## 👩‍💻 Author
