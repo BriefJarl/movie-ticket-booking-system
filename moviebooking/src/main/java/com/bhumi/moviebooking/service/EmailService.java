@@ -23,7 +23,6 @@ public class EmailService {
 
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
-            // (ADD THIS)
             helper.setFrom("YOUR_EMAIL@gmail.com"); // <-- REPLACE WITH YOUR EMAIL
 
             helper.setTo(toEmail);
