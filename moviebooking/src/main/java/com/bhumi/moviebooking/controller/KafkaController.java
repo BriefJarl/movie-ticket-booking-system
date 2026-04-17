@@ -20,6 +20,6 @@ public class KafkaController {
         // METHOD NAME
         producerService.sendTicketEvent(user, movie, seat);
 
-        return "✅ Ticket booking event sent!";
+        return "Ticket booking event sent!";
     }
 }
