@@ -12,18 +12,18 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // 👉 Many tickets belong to one user
+    //Many tickets belong to one user
     @ManyToOne
     @JoinColumn(name = "user_id")
     @JsonIgnore
     private User user;
 
-    // 👉 Many tickets belong to one show
+    //Many tickets belong to one show
     @ManyToOne
     @JoinColumn(name = "show_id")
     private Show show;
 
-    // 👉 One ticket can have multiple seats
+    //One ticket can have multiple seats
     @ManyToMany
     @JoinTable(
             name = "ticket_seats",
