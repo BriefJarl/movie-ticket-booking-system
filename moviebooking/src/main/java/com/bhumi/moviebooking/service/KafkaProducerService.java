@@ -13,7 +13,6 @@ public class KafkaProducerService {
     @Autowired
     private KafkaTemplate<String, TicketEvent> jsonkafkaTemplate;
 
-    // 🔥 THIS METHOD MUST EXIST
     public void sendTicketEvent(String user, String movie, String seat) {
 
         TicketEvent event = new TicketEvent(user, movie, seat);
