@@ -4,12 +4,11 @@ import java.util.List;
 
 public class BookingRequest {
 
-    private List<String> seatNumbers;  // ["1A","1B"]
+    private List<String> seatNumbers; 
     private Long userId;
     private Long showId;
     private String seatType;
 
-    // GETTERS
 
     public List<String> getSeatNumbers() {
         return seatNumbers;
@@ -27,7 +26,6 @@ public class BookingRequest {
         return seatType;
     }
 
-    // SETTERS
 
     public void setSeatNumbers(List<String> seatNumbers) {
         this.seatNumbers = seatNumbers;
