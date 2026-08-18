@@ -20,14 +20,12 @@ import java.util.Map;
 public class KafkaConfig {
 
     public static final String TOPIC = "TICKET_BOOKED";
-
-    // Create Topic automatically
     @Bean
     public NewTopic createTopic() {
         return TopicBuilder.name(TOPIC).build();
     }
 
-    // ================== STRING CONFIG ==================
+   //String config
     @Bean
     public ProducerFactory<String, String> producerFactory() {
         Map<String, Object> config = new HashMap<>();
@@ -44,7 +42,7 @@ public class KafkaConfig {
         return new KafkaTemplate<>(producerFactory());
     }
 
-    // ================== JSON CONFIG ==================
+    //json
     @Bean
     public ProducerFactory<String, TicketEvent> jsonProducerFactory() {
 
