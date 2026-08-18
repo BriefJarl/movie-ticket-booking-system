@@ -34,7 +34,7 @@ public class Ticket {
 
     private double amount;
 
-    // ===== GETTERS =====
+    //getters
 
     public Long getId() {
         return id;
@@ -56,7 +56,7 @@ public class Ticket {
         return amount;
     }
 
-    // ===== SETTERS =====
+    //setters
 
     public void setId(Long id) {
         this.id = id;
