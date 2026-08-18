@@ -23,7 +23,7 @@ public class EmailService {
 
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
-            helper.setFrom("YOUR_EMAIL@gmail.com"); // <-- REPLACE WITH YOUR EMAIL
+            helper.setFrom("YOUR_EMAIL@gmail.com"); 
 
             helper.setTo(toEmail);
             helper.setSubject("🎬 Ticket Booking Confirmed");
@@ -59,10 +59,10 @@ public class EmailService {
 
             mailSender.send(message);
 
-            System.out.println("✅ HTML Email sent successfully!");
+            System.out.println("HTML Email sent successfully!!");
 
         } catch (MessagingException e) {
-            System.out.println("❌ EMAIL ERROR OCCURRED");
+            System.out.println("EMAIL ERROR OCCURRED");
             e.printStackTrace();
         }
     }
