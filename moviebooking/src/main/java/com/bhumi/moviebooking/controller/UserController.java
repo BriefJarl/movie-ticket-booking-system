@@ -1,7 +1,7 @@
 package com.bhumi.moviebooking.controller;
 
 import com.bhumi.moviebooking.service.UserService;
-import com.bhumi.moviebooking.service.TicketService; //  ADD THIS
+import com.bhumi.moviebooking.service.TicketService; 
 import com.bhumi.moviebooking.resource.BookingResponse;
 import org.springframework.web.bind.annotation.*;
 
