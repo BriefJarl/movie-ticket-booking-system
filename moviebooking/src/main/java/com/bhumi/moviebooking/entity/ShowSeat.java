@@ -10,11 +10,10 @@ public class ShowSeat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String seatNumber;   // like A1, A2
-
+    private String seatNumber;   
     private boolean available = true;
 
-    // Many seats belong to one show
+    // Here many seats belong to one show
     @ManyToOne
     @JoinColumn(name = "show_id")
     @JsonIgnore
