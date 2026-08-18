@@ -16,10 +16,8 @@ public class KafkaController {
             @RequestParam String user,
             @RequestParam String movie,
             @RequestParam String seat) {
-
-        // METHOD NAME
+        
         producerService.sendTicketEvent(user, movie, seat);
-
         return "Ticket booking event sent!";
     }
 }
