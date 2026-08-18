@@ -24,7 +24,6 @@ public class KafkaConsumerService {
         try {
             String to = "codersamurai.96@gmail.com";
 
-            // (ADD THIS)
             System.out.println("📧 Sending email to: " + to);
 
             emailService.sendTicketEmail(
@@ -34,10 +33,10 @@ public class KafkaConsumerService {
                     event.getSeat()
             );
 
-            System.out.println("✅ Email function called successfully!");
+            System.out.println("Email function called successfully! :)");
 
         } catch (Exception e) {
-            System.out.println("❌ Email sending failed");
+            System.out.println("Email sending failed :(");
             e.printStackTrace();
         }
     }
