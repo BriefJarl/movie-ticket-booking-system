@@ -100,7 +100,6 @@ public class ShowService {
     }
 
 
-    // REQUIRED FOR MovieController
     public List<ShowResponse> getShowsByMovie(Long movieId) {
 
         List<Object[]> results = showRepository.getShowsByMovie(movieId);
