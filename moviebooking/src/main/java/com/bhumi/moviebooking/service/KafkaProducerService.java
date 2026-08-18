@@ -19,6 +19,6 @@ public class KafkaProducerService {
 
         jsonkafkaTemplate.send(TOPIC, event);
 
-        System.out.println("🔥 Event sent to Kafka: " + event);
+        System.out.println("Event sent to Kafka: " + event);
     }
 }
