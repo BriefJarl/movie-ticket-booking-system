@@ -4,8 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "movies")
 public class Movie {
 
     @Id
@@ -15,6 +17,7 @@ public class Movie {
     private String title;
     private String genre;
     private int duration;
+    private Double rating = 0.0;
 
     // Constructors
     public Movie() {}
@@ -36,4 +39,7 @@ public class Movie {
 
     public int getDuration() { return duration; }
     public void setDuration(int duration) { this.duration = duration; }
+
+    public Double getRating() { return rating; }
+    public void setRating(Double rating) { this.rating = rating; }
 }
