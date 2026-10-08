@@ -1,0 +1,5 @@
+-- Flyway Baseline Marker: V1__baseline_existing_schema.sql
+-- Description: Baseline marker representing the pre-existing schema of moviebookingdb.
+-- Pre-existing tables: movies, shows, theaters, bookings, tickets, ticket_seats, show_seats, show_seat, users, user, reviews, movie.
+-- Note: On existing databases, Flyway baseline-version=1 marks version 1 as already applied,
+-- so this file is not executed. All future incremental schema changes start at V2.
